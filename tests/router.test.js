@@ -2,8 +2,13 @@ import React from 'react'
 import {navigate, setPath, getPath, useRoutes} from '../src/router'
 
 describe("Router", () => {
-  it('should navigate', () => {
+  beforeEach(() => {
+    window.location = '/'
+  })
 
+  it('should navigate', () => {
+    navigate('/some-path')
+    expect(window.location.pathname).toBe('/some-path')
   })
 
   it('should set path', () => {
@@ -15,6 +20,6 @@ describe("Router", () => {
   })
   
   it('should use routes', () => {
-    
+
   })
 })
