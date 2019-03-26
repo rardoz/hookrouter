@@ -4,7 +4,9 @@
   "description": "A hook based router for React",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage --colors",
     "prepublishOnly": "babel ./src --out-dir ./dist -s inline"
   },
   "repository": {
@@ -28,6 +30,11 @@
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.3.1",
     "@babel/preset-react": "^7.0.0",
-    "react": "16.8.2"
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.11.2",
+    "jest": "^24.5.0",
+    "react": "16.8.2",
+    "react-dom": "^16.8.5",
+    "react-hooks-testing-library": "^0.3.8"
   }
 }
