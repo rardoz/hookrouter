@@ -12,11 +12,12 @@ describe("Router", () => {
   })
 
   it('should set path', () => {
-
+    expect(setPath('/my-path')).toBe('/my-path')
   })
 
   it('should get path', () => {
-
+    navigate('/some-path')
+    expect(getPath()).toBe('/some-path')
   })
   
   it('should use routes', () => {
