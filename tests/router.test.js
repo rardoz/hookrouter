@@ -50,7 +50,6 @@ describe("Router", () => {
     expect(component.text()).toBe('Not found')
   })
 
-
   it('should navigate to products', () => {
     act(() => navigate('/products'))
     expect(component.text()).toBe('Products')
@@ -60,5 +59,4 @@ describe("Router", () => {
     act(() => navigate('/products/123'))
     expect(component.text()).toBe('Product id is: 123')
   })
-
 })
